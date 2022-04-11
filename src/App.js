@@ -10,24 +10,24 @@ const App = () => {
   const addToText = (val) => {
     setText(text + val);
   };
- 
+
   const calculateResult = () => {
-    try{
+    try {
       setResult(eval(text).toString());
-      setText('')
-    } catch(err){
-      setResult('Error')
+      setText("");
+    } catch (err) {
+      setResult("Error");
     }
   };
-  
+
   const resetInput = () => {
     setText("");
     setResult("");
   };
 
   const deleteInput = () => {
-    setText(text.slice(0, -1))
-  }
+    setText(text.slice(0, -1));
+  };
 
   const buttonColor = "#f2a33c";
 
@@ -61,7 +61,7 @@ const App = () => {
         </div>
         <div className="utilButtons">
           <Button symbol="Clear" color="red" handleClick={resetInput} />
-          <Button symbol="Delete" color='red' handleClick={deleteInput} />
+          <Button symbol="Delete" color="red" handleClick={deleteInput} />
         </div>
       </div>
     </div>
